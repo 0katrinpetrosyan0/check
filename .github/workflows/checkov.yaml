@@ -11,15 +11,9 @@ jobs:
       contents: write
       discussions: write
       pull-requests: write
-    strategy:
-      matrix:
-        path:
-          - fold1
-          - fold2
-     
     steps:
     - uses: dasmeta/reusable-actions-workflows/checkov@main
       with:
         fetch-depth: 0
-        directory: modules/${{ matrix.path }}
+        directory: /
       continue-on-error: true
