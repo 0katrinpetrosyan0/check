@@ -11,19 +11,19 @@ jobs:
       contents: write
       discussions: write
       pull-requests: write
+      checks: write
+      issues: write
+      packages: write
+      repository-projects: write
+      security-events: write
+      statuses: write
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        path:
-          - fold1
-          - fold2
-     
     steps:
     - uses: dasmeta/reusable-actions-workflows/tflint@main
       with:
         aws-region: ${{ secrets.AWS_REGION}}
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        path: modules/${{ matrix.path }}
+        path: /
         repo-token: ${{ secrets.GITHUB_TOKEN }}
       continue-on-error: true
