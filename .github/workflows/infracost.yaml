@@ -10,7 +10,7 @@ jobs:
       actions: write
       contents: write
       discussions: write
-      # pull-requests: write
+      pull-requests: write
       # checks: write
       # packages: write
       # repository-projects: write
@@ -27,7 +27,7 @@ jobs:
       - name: Setup Infracost
         uses: infracost/actions/setup@v2
         with:
-           api-key: ${{secret.INFRACOST_API_KEY}}
+           api-key: ${{secrets.INFRACOST_API_KEY}}
 
       - name: Checkout base branch
         uses: actions/checkout@v3
