@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       actions: write
-      # contents: write
+      contents: write
       discussions: write
       # pull-requests: write
       # checks: write

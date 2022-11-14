@@ -7,7 +7,7 @@ jobs:
   terraform-validate:
     permissions:
       actions: write
-      # contents: write
+      contents: write
       discussions: write
       # pull-requests: write
       # checks: write
